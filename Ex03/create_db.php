@@ -20,14 +20,7 @@ if (mysqli_query($conn, $sql)) {
 // Chọn database ex03
 mysqli_select_db($conn, 'ex03');
 
-// Tạo bảng products nếu chưa có
-$sql = "CREATE TABLE IF NOT EXISTS products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    price FLOAT NOT NULL,
-    quantity INT NOT NULL,
-    image VARCHAR(255)
-)";
+
 if (mysqli_query($conn, $sql)) {
     echo "Đã kiểm tra/tạo bảng products.";
 } else {
